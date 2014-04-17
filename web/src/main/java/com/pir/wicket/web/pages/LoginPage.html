@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+</head>
+<wicket:extend>
+    <div class='middle-container'>
+        <div class='middle-row'>
+            <div class='middle-wrapper'>
+                <div class='login-container-header'>
+                    <div class='container'>
+                        <div class='row'>
+                            <div class='col-sm-12'>
+                                <div class='text-center'>
+                                    <img height="31" src="assets/images/logo_lg.png"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='login-container'>
+                    <div class='container'>
+                        <div class='row'>
+                            <div class='col-sm-4 col-sm-offset-4'>
+                                <div class='box'>
+                                    <div class='box-header red-background'>
+                                        <div class='title'>
+                                            <div class='icon-edit'></div>
+                                            Sign In!
+                                        </div>
+                                    </div>
+                                    <div class='box-content'>
+                                        <form wicket:id="loginForm" class="form validate-form" style="margin-bottom: 0;"
+                                              method="post" action="#" accept-charset="UTF-8">
+                                            <div wicket:id="feedback">[[ feedback ]]</div>
+                                            <input name="authenticity_token" type="hidden"/>
+
+                                            <div class='form-group'>
+                                                <div class='controls with-icon-over-input'>
+                                                    <label for='username'>Username or Email</label>
+                                                    <input input wicket:id="identifier" value=""
+                                                           placeholder="username or email" class="form-control"
+                                                           id="username" name="username" type="text"
+                                                           data-rule-required='true'/>
+                                                    <i class='icon-user text-muted'></i>
+                                                </div>
+                                            </div>
+                                            <div class='form-group'>
+                                                <div class='controls with-icon-over-input'>
+                                                    <label for='password'>Password</label>
+                                                    <input wicket:id="password" value="" placeholder="Password"
+                                                           class="form-control" id="password" name="password"
+                                                           type="password" data-rule-required='true'/>
+                                                    <i class='icon-lock text-muted'></i>
+                                                </div>
+                                            </div>
+                                            <div class='form-group'>
+                                                <div class='controls with-icon-over-input'>
+                                                    <label for='remember_me'>
+                                                        <input wicket:id="rememberMe" id='remember_me'
+                                                               name='remember_me' type='checkbox' value='1'>
+                                                        Remember me
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class='form-actions form-actions-padding-sm form-actions-padding-md form-actions-padding-lg text-center'
+                                                 style='margin-bottom: 0;'>
+                                                <button wicket:id="login" class='btn btn-primary btn-lg' type="submit">
+                                                    <i class='icon-save'></i>
+                                                    Log in!
+                                                </button>
+                                            </div>
+                                        </form>
+                                        <div class='text-center'>
+                                            <hr class='hr-normal'>
+                                            <a href='/ForgotPassword'>Forgot your password?</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='login-container-footer'>
+                    <div class='container'>
+                        <div class='row'>
+                            <div class='col-sm-12'>
+                                <div class='text-center'>
+                                    <a href='/SignUp'>
+                                        <i class='icon-user'></i>
+                                        New to Group Notifier?
+                                        <strong>Sign up</strong>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</wicket:extend>
+</html>

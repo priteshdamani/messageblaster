@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+</head>
+<body>
+<wicket:extend>
+    <div class='col-xs-12'><div class='row'>
+        <div class='col-sm-12'>
+            <div class='box'>
+                <div class='box-header blue-background'>
+                    <div class='title'>
+                        <div class='icon-edit'></div>
+                        Payment for group - Group Name
+                    </div>
+                </div>
+                <div class='box-content'>
+                    <form wicket:id="payForm" class="form form-horizontal validate-form" style="margin-bottom: 0;" method="post" action="#" accept-charset="UTF-8">
+                        <input wicket:id="groupId" type="hidden"/>
+                        <div wicket:id="feedback" style="color:red;">
+                            [[ feedback ]]
+                        </div>
+                        <div class='form-group'>
+                            <div class='controls with-icon-over-input'>
+                                <label class='col-md-2 control-label' for='ccNum'>Credit Card Number</label>
+                                <div class='col-md-5'>
+                                    <input wicket:id="ccNum" class='form-control' id='ccNum' placeholder='Credit Card Number' type='text' data-rule-required="true" data-rule-number="true">
+                                </div>
+                            </div>
+                        </div>
+                        <div class='form-group'>
+                            <div class='controls with-icon-over-input'>
+                                <label class='col-md-2 control-label' for='ccName'>Name as on card</label>
+                                <div class='col-md-5'>
+                                    <input wicket:id="ccName" class='form-control' id='ccName' placeholder='Name as on card' type='text' data-rule-required="true">
+                                </div>
+                            </div>
+                        </div>
+                        <div class='form-group'>
+                            <div class='controls with-icon-over-input'>
+                                <label class='col-md-2 control-label' for='ccExpMon'>Expiration Month</label>
+                                <div class='col-md-5'>
+                                    <select wicket:id="ccExpMon" id="ccExpMon" class="form-control" data-rule-required="true">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='form-group'>
+                            <div class='controls with-icon-over-input'>
+                                <label class='col-md-2 control-label' for='ccExpYear'>Expiration Year</label>
+                                <div class='col-md-5'>
+                                    <select wicket:id="ccExpYear" id="ccExpYear" class="form-control" data-rule-required="true">
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class='form-group'>
+                            <div class='controls with-icon-over-input'>
+                                <label class='col-md-2 control-label' for='ccCvc'>CVC</label>
+                                <div class='col-md-5'>
+                                    <input wicket:id="ccCvc" class='form-control' id='ccCvc' placeholder='CVC' type='text' data-rule-required="true" data-rule-number="true">
+                                </div>
+                            </div>
+                        </div>
+                        <div class='form-actions form-actions-padding-sm form-actions-padding-md form-actions-padding-lg text-center' style='margin-bottom: 0;'>
+                            <input wicket:id="payButton" class='paymentBtn btn btn-success btn-lg' type="submit" value="Pay Now">
+                            </input><br/><br/><br/>
+                            <img src="assets/images/RapidSSL_SEAL-90x50.gif"/>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".form").delegate("input","keypress",function(e){
+                if(e.originalEvent.keyCode == 13){
+                    e.preventDefault();
+                }
+            });
+        });
+
+        function disable(){
+            $(".paymentBtn").prop('disabled', true);
+            $(".paymentBtn").val('Processing ....');
+            $(".form").submit();
+        }
+    </script>
+</wicket:extend>
+</body>
+</html>

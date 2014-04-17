@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+</head>
+<wicket:extend>
+    <div class='middle-container'>
+        <div class='middle-row'>
+            <div class='middle-wrapper'>
+                <div class='error-container-header'>
+                    <div class='container'>
+                        <div class='row'>
+                            <div class='col-sm-12'>
+                                <div class='text-center'>
+                                    <i class='icon-exclamation-sign'></i>
+                                    <span wicket:id="title"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='error-container'>
+                    <div class='container'>
+                        <div class='row'>
+                            <div class='col-sm-4 col-sm-offset-4'>
+                                <h4 class='text-center title'>
+                                    <span wicket:id="msg"></span>
+                                </h4>
+
+                                <div class='text-center'>
+                                    <a class='btn' href='/Dashboard' wicket:id="nextPage">
+                                        <span wicket:id="buttonLbl"></span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='error-container-footer'>
+                    <div class='container'>
+                        <div class='row'>
+                            <div class='col-sm-12'>
+                                <div class='text-center'>
+                                    <img height="31" alt="Group Notifier" src="assets/images/logo_lg.png"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</wicket:extend>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<body>
+<wicket:extend>
+<div class='col-xs-12'>
+    <div class='row'>
+        <div class='col-sm-9 col-lg-10'>
+            <div class='box'>
+                <div class='box-content box-double-padding'>
+                    <form wicket:id="profileForm" class='form validate-form' style='margin-bottom: 0;'>
+                        <input wicket:id="userId" type="hidden"/>
+                        <fieldset>
+                            <div class='col-sm-4'>
+                                <div class='lead'>
+                                    <i class='icon-github text-contrast'></i>
+                                    Basic Information
+                                </div>
+                                <small class='text-muted'>Your contact info!</small>
+                            </div>
+                            <div class='col-sm-7 col-sm-offset-1'>
+                                <div wicket:id="feedback" style="color:red;">
+                                    [[ feedback ]]
+                                </div>
+                                <div class='form-group'>
+                                    <label>Username: </label>
+                                    <span wicket:id="username">priitmaxx</span>
+                                </div>
+                                <div class='form-group'>
+                                    <div class='form-group'>
+                                        <div class='controls with-icon-over-input'>
+                                        <label>E-mail</label>
+                                        <input wicket:id="email" class='form-control' id='email' placeholder='E-mail' type='text' data-rule-required="true" data-rule-email="true">
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class='hr-normal'>
+                                <div class='form-group'>
+                                    <div class='controls'>
+                                        <a href="#" class="text-contrast" onclick="showPasswordChangePopup();">
+                                        Change password?
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <hr class='hr-normal'>
+                        <fieldset>
+                            <div class='col-sm-4'>
+                                <div class='lead'>
+                                    <i class='icon-user text-contrast'></i>
+                                    Personal info
+                                </div>
+                                <small class='text-muted'>What's your name!.</small>
+                            </div>
+                            <div class='col-sm-7 col-sm-offset-1'>
+                                <div class='form-group'>
+                                    <div class='form-group'>
+                                        <div class='controls with-icon-over-input'>
+                                        <label>First name</label>
+                                        <input wicket:id="firstName" class='form-control' id='firstname' placeholder='First name' type='text' data-rule-required="true">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='form-group'>
+                                    <div class='form-group'>
+                                        <div class='controls with-icon-over-input'>
+                                        <label>Last name</label>
+                                        <input wicket:id="lastName" class='form-control' id='lastname' placeholder='Last name' type='text' data-rule-required="true">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class='form-group'>
+                                    <div class='controls with-icon-over-input'>
+                                        <label for='mobileNumber'>Mobile Number? (this is where you receive text messages. You can choose which group can send you text messages. This can be done from group options menu in the group tab.)</label>
+                                        <input wicket:id="mobileNumber" value="" placeholder="Mobile Number" class="form-control" id="mobileNumber" name="mobileNumber" type="text" maxlength="100" data-rule-phoneus="true"/>
+                                    </div>
+                                </div>
+                                <div class='form-group'>
+                                    <div class='controls with-icon-over-input'>
+                                        <label for='mobileCarrier'>Mobile Carrier</label>
+                                        <select wicket:id="mobileCarrier" value="" class="form-control" id="mobileCarrier" name="mobileCarrier" />
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class='form-actions form-actions-padding' style='margin-bottom: 0;'>
+                            <div class='text-right'>
+                                <button wicket:id="saveButton" class='btn btn-primary btn-lg' type="submit">
+                                    <i class='icon-save'></i>
+                                    Save
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div tabindex="-1" id="passwordChangeModal" class="modal fade" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form wicket:id="passwordChangeForm" class="form validate-form" accept-charset="UTF-8" action="#" method="post" style="margin-bottom: 0;">
+                <div class="modal-header">
+                    <button type="button" data-dismiss="modal" class="close" aria-hidden="true">×</button>
+                    <h4 id="adminLabel" class="modal-title">Change Password?</h4>
+                </div>
+                <div class="modal-body">
+                    <span id="pmessage"></span>     <br/>
+                    <input wicket:id="userId" id="pUserId" type="hidden" class="form-control">
+                    <div class='form-group'>
+                        <div class='controls with-icon-over-input'>
+                            <label for='password'>Password</label>
+                            <input wicket:id="password" value="" placeholder="Password" class="form-control" id="password" name="password" type="password" maxlength="100" data-rule-required="true" />
+                        </div>
+                    </div>
+                    <div class='form-group'>
+                        <div class='controls with-icon-over-input'>
+                            <label for='passwordConfirmation'>Confirm Password</label>
+                            <input wicket:id="passwordConfirmation" value="" placeholder="Confirm Password" class="form-control" id="passwordConfirmation" name="passwordConfirmation" type="password" maxlength="100" data-rule-equalto="#password" data-rule-required="true"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-success">Cancel</button>
+                    <button class="btn btn-danger" type="submit">Change</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showPasswordChangePopup(){
+        $("#passwordChangeModal").modal();
+    }
+</script>
+</wicket:extend>
+</body>
+</html>

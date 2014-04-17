@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+</head>
+<body>
+<wicket:extend>
+<div class='row'>
+    <div wicket:id="sendBox"></div>
+<div class='col-sm-6'>
+<div class='row'>
+<div class='chat'>
+<div class='col-sm-12'>
+<div class='box'>
+<div class='box-header blue-background'>
+    <div class='title'>
+        <i class='icon-comments-alt'></i>
+        Messages
+    </div>
+    <div class='actions'>
+
+        <a class="btn box-collapse btn-xs btn-link" href="#"><i></i>
+        </a>
+    </div>
+</div>
+<div class='box-content box-no-padding'>
+<div wicket:id="noMessages"></div>
+<div class='scrollable' data-scrollable-height='300' data-scrollable-start='bottom'>
+<ul wicket:id="messageList" class='list-unstyled list-hover list-striped'>
+<li class='message'>
+    <div class='avatar'>
+        <i class="icon-comment"></i>
+        <!--<img alt='Avatar' height='23' src='assets/images/avatar.jpg' width='23'>-->
+    </div>
+    <div class='name-and-time'>
+        <div class='name pull-left'>
+            <small>
+                <span wicket:id="senderName" class="text-contrast" href="#">Tomas</span>
+            </small>
+        </div>
+        <div class='time pull-right'>
+            <small class='date pull-right text-muted'>
+                <span wicket:id="messageDate" data-placement='top'>September 15, 2013 - 17:42</span>
+                <i class='icon-time'></i>
+            </small>
+        </div>
+    </div>
+    <div wicket:id="subject" class='body'>
+        subject
+    </div>
+    <div wicket:id="body" class='body'>
+        body
+    </div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</wicket:extend>
+</body>
+</html>

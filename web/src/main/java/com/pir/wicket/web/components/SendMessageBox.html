@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<body>
+<wicket:panel>
+<div class='col-sm-6'>
+<div class='row'>
+    <div class='col-sm-12'>
+        <div class='box'>
+            <div class='box-header green-background'>
+                <div class='title'>
+                    <div class='icon-envelope-alt'></div>
+                    Send Message
+                </div>
+                <div class='actions'>
+                    <a class="btn box-collapse btn-xs btn-link" href="#"><i></i>
+                    </a>
+                </div>
+            </div>
+            <div class='box-content'>
+                <form wicket:id="sendForm" style="margin-bottom: 0;">
+                    <div class='form-group'>
+                        <div class='controls with-icon-over-input'>
+                            <input wicket:id="subjectTxt" value="" placeholder="Subject" class="form-control" name="subject" type="text" />
+                        </div>
+                    </div>
+                    <div class='form-group'>
+                        <textarea wicket:id="bodyTxt" class='form-control' id='body' placeholder='Your message...' rows='5'></textarea>
+                    </div>
+                    <div class='text-right'>
+                        <button wicket:id="sendButton" type="submit" class="btn btn-primary">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</wicket:panel>
+</body>
+</html>

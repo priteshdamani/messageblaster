@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+</head>
+<body>
+<wicket:extend>
+<div class='row'>
+<div class='chat'>
+<div class='col-sm-12'>
+
+<div class='box bordered-box orange-border' style='margin-bottom:0;'>
+    <div class='box-header blue-background'>
+        <div class='title'>Messages</div>
+    </div>
+    <div class='box-content box-no-padding'>
+        <div class='responsive-table'>
+            <div class='scrollable-area'>
+                <table class='data-table table table-bordered table-striped' style='margin-bottom:0;'>
+                    <thead>
+                    <tr>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Message
+                        </th>
+                        <th>
+                            Sent On
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr wicket:id="messageList">
+                        <td>
+                            <span wicket:id="senderName">Janick Williamson</span>
+                        </td>
+                        <td>
+                            <div wicket:id="subject" class='body'>
+                                subject
+                            </div>
+                            <div wicket:id="body" class='body'>
+                                body
+                            </div>
+                        </td>
+                        <td>
+                            <span wicket:id="messageDate" data-placement='top'>September 15, 2013 - 17:42</span>
+                            <i class='icon-time'></i>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+</wicket:extend>
+</body>
+</html>

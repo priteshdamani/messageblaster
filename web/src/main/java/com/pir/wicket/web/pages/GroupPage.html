@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+</head>
+<wicket:extend>
+    <div class='middle-container'>
+        <div class='middle-row'>
+            <div class='middle-wrapper'>
+                <div class='login-container-header'>
+                    <div class='container'>
+                        <div class='row'>
+                            <div class='col-sm-12'>
+                                <div class='text-center'>
+                                    <img height="31" src="assets/images/logo_lg.png"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='login-container'>
+                    <div class='container'>
+                        <div class='row'>
+                            <form class="form validate-form" wicket:id="joinForm">
+                                <h1 class='text-center title'>Welcome to <span wicket:id="groupName">Group Name</span>
+                                </h1>
+
+                                <h3 class='text-center title'><span
+                                        wicket:id="groupDescription">Group Description</span></h3>
+
+                                <div class='form-group text-center '>
+                                    <div class='controls'>
+                                        <label for='agreement'>
+                                            <input id='agreement' name='agreement' type='checkbox' value=''
+                                                   data-rule-required='true'>
+                                            I accept
+                                            <a class='text-contrast' href='/Terms'>terms and conditions</a>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class='col-md-4 col-md-offset-4'>
+                                    <button wicket:id="joinButton" class='btn btn-success btn-block btn-lg'>Join this
+                                        group and receive messages!
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+                <div class='login-container-footer'>
+                    <div class='container'>
+                        <div class='row'>
+                            <div class='col-sm-12'>
+                                <div class='text-center'>
+                                    <a href='/Help'>
+                                        <i class='icon-user'></i>
+                                        <strong>Help?</strong>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</wicket:extend>
+</html>

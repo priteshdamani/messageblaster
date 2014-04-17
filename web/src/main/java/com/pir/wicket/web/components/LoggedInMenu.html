@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<body>
+<wicket:panel>
+    <nav class='navbar navbar-default'>
+        <a class='navbar-brand' href='/'>
+            <img height="21" class="logo" alt="Group Notifier" src="assets/images/logo.png"/>
+            <img height="21" class="logo-xs" alt="Group Notifier" src="assets/images/logo_xs.png"/>
+        </a>
+        <a class='toggle-nav btn pull-left' href='#'>
+            <i class='icon-reorder'></i>
+        </a>
+        <ul class='nav navbar-nav'>
+            <li class="light"><a href="#" wicket:id="resendVerificationEmail"><span wicket:id="resendLbl"></span></a>
+            </li>
+            <li class='medium text-contrast'>
+                <a href="javascript:startTour();">Need Help? Take a tour!</a>
+            </li>
+            <li class='dropdown dark user-menu'>
+                <a class='dropdown-toggle' data-toggle='dropdown' href='#'>
+                    <!--<img width="23" height="23" alt="Mila Kunis" src="assets/images/avatar.jpg" />-->
+                    <span wicket:id="name" class='user-name'>Name</span>
+                    <b class='caret'></b>
+                </a>
+                <ul class='dropdown-menu'>
+                    <li>
+                        <a href='/Profile'>
+                            <i class='icon-user'></i>
+                            Profile
+                        </a>
+                    </li>
+                    <li class='divider'></li>
+                    <li>
+                        <a href='/SignOut'>
+                            <i class='icon-signout'></i>
+                            Sign out
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</wicket:panel>
+</body>
+</html>

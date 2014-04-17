@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+       default-autowire="byName">
+
+    <!--<context:property-placeholder location="classpath:@project.artifactId@.properties" ignore-resource-not-found="false" />
+-->
+
+    <!-- Quartz jobs -->
+
+    <bean id="mailerTask" class="com.pir.jobs.MailerTask"/>
+    <bean id="messageProcessingTask" class="com.pir.jobs.MessageProcessingTask"/>
+
+
+    <bean id="mailerJob"
+          class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+
+        <property name="targetObject" ref="mailerTask"/>
+        <property name="targetMethod" value="runMe"/>
+        <property name="concurrent" value="false"/>
+
+    </bean>
+
+    <bean id="messageProcessingJob"
+          class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+
+        <property name="targetObject" ref="messageProcessingTask"/>
+        <property name="targetMethod" value="runMe"/>
+        <property name="concurrent" value="false"/>
+
+    </bean>
+
+
+    <!-- normal mailer -->
+    <bean id="mailerTrigger"
+          class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+
+        <property name="jobDetail" ref="mailerJob"/>
+        <property name="repeatInterval" value="100"/>
+        <property name="startDelay" value="1000"/>
+
+    </bean>
+
+    <bean id="messageProcessingTrigger"
+          class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+
+        <property name="jobDetail" ref="messageProcessingJob"/>
+        <property name="repeatInterval" value="100"/>
+        <property name="startDelay" value="1000"/>
+
+    </bean>
+
+
+    <bean class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="triggers">
+            <list>
+                <ref bean="mailerTrigger"/>
+                <ref bean="messageProcessingTrigger"/>
+            </list>
+        </property>
+    </bean>
+</beans>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+    <span wicket:id="headerIncludes"></span>
+    <link href="assets/stylesheets/bootstrap-tour.min.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="assets/stylesheets/plugins/bootstrap_switch/bootstrap-switch.css" media="all" rel="stylesheet"
+          type="text/css"/>
+</head>
+<body class='contrast-red'>
+<header>
+    <span wicket:id="menu"></span>
+</header>
+<div id='wrapper'>
+    <div id='main-nav-bg'></div>
+    <nav id='main-nav'>
+        <div class='navigation' id="sideNav">
+            <ul class='nav nav-stacked'>
+                <li wicket:id="groupNavigation">
+                    <a href="#" wicket:id="groupLink">
+                        <i class='icon-dashboard'></i>
+                        <span wicket:id="groupName">Dashboard</span>
+                    </a>
+                </li>
+            </ul>
+            <ul class='nav nav-stacked'>
+                <li class=''>
+                    <a href='/AddGroup' title="Start New Group" id="startNewGroup">
+                        <i class='icon-group'></i>
+                        <span>Start New Group</span>
+                    </a>
+                </li>
+                <li class=''>
+                    <a href='/JoinGroup' title="Join A Group" id="joinGroup">
+                        <i class='icon-user'></i>
+                        <span>Join A Group</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <section id='content'>
+        <div class='container'>
+            <div class='row' id='content-wrapper'>
+                <div class='col-xs-12'>
+
+                    <div class='row page-header page-header-with-buttons custom-header'>
+                        <h1 style="padding:20px 0 0 0;">
+                            <i class='icon-dashboard'></i>
+                            <span wicket:id="dashboardName" id="groupNumberInfo"></span>
+                        </h1>
+                    </div>
+                    <div class='row box box-transparent'>
+                        <div wicket:id="dashboardMenu">
+                        </div>
+                        <div wicket:id="messagesMenu">
+                        </div>
+                        <div wicket:id="membersMenu">
+                        </div>
+                        <div wicket:id="subscriptionMenu">
+                        </div>
+                        <div wicket:id="notificationOptionsMenu">
+                        </div>
+                        <div wicket:id="groupSettingsMenu">
+                        </div>
+                    </div>
+
+                    <span wicket:id="groupLink_div"></span>
+
+
+                    <wicket:child/>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<span wicket:id="footer"></span>
+<span wicket:id="footerIncludes"></span>
+
+<script src="assets/javascripts/plugins/datatables/jquery.dataTables.min.js" type="text/javascript"></script>
+<script src="assets/javascripts/plugins/datatables/jquery.dataTables.columnFilter.js" type="text/javascript"></script>
+<script src="assets/javascripts/plugins/datatables/dataTables.overrides.js" type="text/javascript"></script>
+<script src="assets/javascripts/plugins/common/moment.min.js" type="text/javascript"></script>
+<script src="assets/javascripts/plugins/bootbox/bootbox.min.js" type="text/javascript"></script>
+<script src="assets/javascripts/plugins/slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="assets/javascripts/plugins/bootstrap_switch/bootstrapSwitch.min.js" type="text/javascript"></script>
+<script src="assets/javascripts/bootstrap-tour.min.js" type="text/javascript"></script>
+<!-- / END - page related files and scripts [optional] -->
+
+<span wicket:id="trackingPnl"/>
+<span wicket:id="userVoicePnl"/>
+</body>
+</html>

@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Group Notifier - Easiest way to send a message to a group.</title>
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
+    <meta content='text/html;charset=utf-8' http-equiv='content-type'>
+    <meta content='Create your own group and send group text messages and emails.' name='description'>
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link href="assets/stylesheets/bootstrap/bootstrap.css" media="all" rel="stylesheet" type="text/css"/>
+    <!-- / theme file [required] -->
+    <link href="assets/stylesheets/light-theme.css" media="all" id="color-settings-body-color" rel="stylesheet"
+          type="text/css"/>
+    <!-- / coloring file [optional] (if you are going to use custom contrast color) -->
+    <link href="assets/stylesheets/theme-colors.css" media="all" rel="stylesheet" type="text/css"/>
+    <!-- / demo file [not required!] -->
+    <link href="assets/stylesheets/demo.css" media="all" rel="stylesheet" type="text/css"/>
+
+    <!-- Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic"
+          rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+
+    <!-- CSS Files -->
+    <link href="landingPage/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="landingPage/css/font-awesome.min.css" rel="stylesheet">
+    <link href="landingPage/css/magnific-popup.css" rel="stylesheet">
+    <link href="landingPage/css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<header id="home">
+    <nav class='navbar navbar-default'>
+        <a class='navbar-brand' href='/' style="padding-top: 15px;">
+            <img height="21" class="logo" alt="Group Notifier" src="assets/images/logo.png"/>
+            <img height="21" class="logo-xs" alt="Group Notifier" src="assets/images/logo_xs.png"/>
+        </a>
+        <ul class="nav navbar-nav">
+            <li>
+                <a href="/Login">Login</a>
+            </li>
+            <li>
+                <a href="/SignUp">Sign Up</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="carousel-main" class="carousel slide">
+
+        <ol class="carousel-indicators">
+            <li data-target="#carousel-main" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-main" data-slide-to="1"></li>
+            <li data-target="#carousel-main" data-slide-to="2"></li>
+            <li data-target="#carousel-main" data-slide-to="3"></li>
+            <li data-target="#carousel-main" data-slide-to="4"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+
+            <div class="item active">
+                <img src="landingPage/img/bg-1.jpg" class="bg" alt="">
+
+                <div class="container" style="padding:60px 0;">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="row text-center">
+                            <div class="col-lg-12">
+                                <h1 style="color: white;">Free and easy way to send a group message.</h1>
+
+                                <h2 style="color: white;">Keep your team on the same page.</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="box box-content">
+                                <div class="col-md-3 col-md-offset-3" style="background-color: #f8f8f8;">
+                                    <h2 class="pull-left">Join Group &nbsp;&nbsp;&nbsp;&nbsp;</h2>
+                                    <a href="/JoinGroup" class="btn btn-success"><i class="icon-youtube-play"></i> I
+                                        have my group number!</a>
+                                </div>
+                                <div class="col-md-3" style="background-color: #E5E5E5;">
+                                <h2 class="pull-left">Send Messages</h2>
+                                    <a href="/CreateNewGroup" class="btn btn-warning"><i class="icon-youtube-play"></i>
+                                        Start group, send messages!</a>
+                                </div>
+                        </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="landingPage/img/bg-2.jpg" class="bg" alt="">
+
+                <div class="container" style="padding:60px 0;">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="row text-center">
+                            <div class="col-lg-12">
+                                <h1 style="color: white;">Free and easy way to send a group message.</h1>
+
+                                <h2 style="color: white;">Snow day? Let everyone know!</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="box box-content">
+                                <div class="col-md-3 col-md-offset-3" style="background-color: #f8f8f8;">
+                                    <h2 class="pull-left">Join Group &nbsp;&nbsp;&nbsp;&nbsp;</h2>
+                                    <a href="/JoinGroup" class="btn btn-success"><i class="icon-youtube-play"></i> I
+                                        have my group number!</a>
+                                </div>
+                                <div class="col-md-3" style="background-color: #E5E5E5;">
+                                <h2 class="pull-left">Send Messages</h2>
+                                    <a href="/CreateNewGroup" class="btn btn-warning"><i class="icon-youtube-play"></i>
+                                        Start group, send messages!</a>
+                                </div>
+                        </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="landingPage/img/bg-5.jpg" class="bg" alt="">
+
+                <div class="container" style="padding:60px 0;">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="row text-center">
+                            <div class="col-lg-12">
+                                <h1 style="color: white;">Free and easy way to send a group message.</h1>
+
+                                <h2 style="color: white;">Rain delay? Let everyone know!</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="box box-content">
+                                <div class="col-md-3 col-md-offset-3" style="background-color: #f8f8f8;">
+                                    <h2 class="pull-left">Join Group &nbsp;&nbsp;&nbsp;&nbsp;</h2>
+                                    <a href="/JoinGroup" class="btn btn-success"><i class="icon-youtube-play"></i> I
+                                        have my group number!</a>
+                                </div>
+                                <div class="col-md-3" style="background-color: #E5E5E5;">
+                                <h2 class="pull-left">Send Messages</h2>
+                                    <a href="/CreateNewGroup" class="btn btn-warning"><i class="icon-youtube-play"></i>
+                                        Start group, send messages!</a>
+                                </div>
+                        </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="landingPage/img/bg-3.jpg" class="bg" alt="">
+
+                <div class="container" style="padding:60px 0;">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="row text-center">
+                            <div class="col-lg-12">
+                                <h1 style="color: white;">Free and easy way to send a group message.</h1>
+
+                                <h2 style="color: white;">Permission slips due? Send a reminder!</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="box box-content">
+                                <div class="col-md-3 col-md-offset-3" style="background-color: #f8f8f8;">
+                                    <h2 class="pull-left">Join Group &nbsp;&nbsp;&nbsp;&nbsp;</h2>
+                                    <a href="/JoinGroup" class="btn btn-success"><i class="icon-youtube-play"></i> I
+                                        have my group number!</a>
+                                </div>
+                                <div class="col-md-3" style="background-color: #E5E5E5;">
+                                <h2 class="pull-left">Send Messages</h2>
+                                    <a href="/CreateNewGroup" class="btn btn-warning"><i class="icon-youtube-play"></i>
+                                        Start group, send messages!</a>
+                                </div>
+                        </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="landingPage/img/bg-4.jpg" class="bg" alt="">
+
+                <div class="container" style="padding:60px 0;">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="row text-center">
+                            <div class="col-lg-12">
+                                <h1 style="color: white;">Free and easy way to send a group message.</h1>
+
+                                <h2 style="color: white;">Meeting place change? Let everyone know!</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="box box-content">
+                                <div class="col-md-3 col-md-offset-3" style="background-color: #f8f8f8;">
+                                    <h2 class="pull-left">Join Group &nbsp;&nbsp;&nbsp;&nbsp;</h2>
+                                    <a href="/JoinGroup" class="btn btn-success"><i class="icon-youtube-play"></i> I
+                                        have my group number!</a>
+                                </div>
+                                <div class="col-md-3" style="background-color: #E5E5E5;">
+                                <h2 class="pull-left">Send Messages</h2>
+                                    <a href="/CreateNewGroup" class="btn btn-warning"><i class="icon-youtube-play"></i>
+                                        Start group, send messages!</a>
+                                </div>
+                        </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section id="features">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-12" style="margin-bottom:30px;">
+                <h3 style="margin-top:0;color:gray;">OUR SIMPLE 3 STEP PROCESS</h3>
+
+                <h2>Send text messages and emails to your group within minutes!</h2>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 f-item">
+                <i class="icon-bullhorn"></i>
+
+                <h3><a href="/CreateNewGroup">START A GROUP</a></h3>
+
+                <p>Once you have started a group, you get a unique group number. This is very similar to a phone
+                    number.</p>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 f-item">
+                <i class="icon-group"></i>
+
+                <h3><a href="/JoinGroup">SEND GROUP NUMBER</a></h3>
+
+                <p>Once you have your group number, all you have to do is send it to anyone who you want to put in the
+                    group.</p>
+            </div>
+
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 f-item">
+                <i class="icon-dashboard"></i>
+
+                <h3><a href="/Login">ALL SET</a></h3>
+
+                <p>Its all set! Now you can login and send messages without worrying about contact information or what
+                    not!</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="screenshots">
+    <div class="container">
+        <div class="popup-gallery-screens row">
+
+            <div class="col-lg-12" style="margin-bottom:30px;">
+                <h3 style="margin-top:0;">SCREENSHOTS</h3>
+
+                <h2>Check Out Our App In Action</h2>
+            </div>
+
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <a href="landingPage/img/screenshots/screen1_lg.jpg" title="Screenshot 1">
+                    <div class="pic">
+                        <img src="landingPage/img/screenshots/thumbs/screen1_sm.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <a href="landingPage/img/screenshots/screen2_lg.jpg" title="Screenshot 2">
+                    <div class="pic">
+                        <img src="landingPage/img/screenshots/thumbs/screen2_sm.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <a href="landingPage/img/screenshots/screen3_lg.jpg" title="Screenshot 3">
+                    <div class="pic">
+                        <img src="landingPage/img/screenshots/thumbs/screen3_sm.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                <a href="landingPage/img/screenshots/screen4_lg.jpg" title="Screenshot 4">
+                    <div class="pic">
+                        <img src="landingPage/img/screenshots/thumbs/screen4_sm.jpg" alt=""/>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!--
+<section id="contact">
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-12" style="text-align:center;margin-bottom:30px;">
+                <h3 style="margin:0;">CONTACT US</h3>
+
+                <h2>Tell Us What Is On Your Mind</h2>
+            </div>
+
+            <div class="col-lg-12" style="text-align:center;">
+                <a data-toggle="modal" href="#contactModal" class="btn btn-2" style="margin:0 auto;">CONTACT US</a>
+            </div>
+
+        </div>
+    </div>
+
+</section>-->
+
+<div id="footer" style="background-color: #F34541;">
+    <div class="container">
+        <p>
+            <a title="Support" href="/Support" style="color: white;">Support</a>&nbsp;&nbsp;&nbsp;
+            <a title="Help topics" href="/Help" style="color: white;">Help topics</a>&nbsp;&nbsp;&nbsp;
+            <a title="Pricing" href="/Pricing" style="color: white;">Pricing</a>&nbsp;&nbsp;&nbsp;
+            <a title="Privacy policy" href="/Privacy" style="color: white;">Privacy policy</a>&nbsp;&nbsp;&nbsp;
+            <a title="Terms of use" href="/Terms" style="color: white;">Terms of use</a>&nbsp;&nbsp;&nbsp;
+            <a title="Contact us" href="/Contact" style="color: white;">Contact us</a> <span class="pull-right">
+            &copy; 2013 <a target="_blank" title="Winito Inc" style="color: white;">Winito Inc</a></span>
+            <span style="position: relative; top: -2px;" class="pull-right"></span>
+        </p>
+    </div>
+</div>
+
+<!-- Javascripts -->
+<script src="landingPage/js/jquery.js"></script>
+<script src="landingPage/js/modernizr-2.6.2.min.js"></script>
+<script src="landingPage/js/polyfills.js"></script>
+<script src="landingPage/js/jquery.magnific-popup.min.js"></script>
+<script src="landingPage/js/validation.js"></script>
+<script src="landingPage/js/bootstrap.min.js"></script>
+<script src="landingPage/js/main.js"></script>
+
+<span wicket:id="trackingPnl"/>
+<span wicket:id="userVoicePnl"/>
+<span wicket:id="tawkPnl"/>
+</body>
+
+</html>

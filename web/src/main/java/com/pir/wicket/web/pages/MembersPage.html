@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+</head>
+<body>
+<wicket:extend>
+<div class='col-xs-12'>
+<div class='row'>
+<div class='col-sm-12'>
+<div class='box bordered-box orange-border' style='margin-bottom:0;'>
+<div class='box-header purple-background'>
+    <div class='title'>Group Members</div>
+</div>
+<div class='box-content box-no-padding'>
+<div class='responsive-table'>
+<div class='scrollable-area'>
+<table class='data-table table table-bordered table-striped' style='margin-bottom:0;'>
+<thead>
+<tr>
+    <th>
+        Name
+    </th>
+    <th>
+        E-mail
+    </th>
+    <th>
+        Status
+    </th>
+    <th></th>
+</tr>
+</thead>
+<tbody>
+<tr wicket:id="membersList">
+    <td>
+        <span wicket:id="name">Janick Williamson</span>
+        <span wicket:id="role" class='label'>Role</span>
+    </td>
+    <td><span wicket:id="email">johnson@yahoo.com</span></td>
+    <td>
+        <span class='label label-warning' wicket:id="emailNotificationEnabled">Email</span>
+        <span class='label label-important' wicket:id="txtNotificationEnabled">Text</span>
+        <!--<span class='label label-success'>Iphone</span>
+        <span class='label label-success'>Android</span>-->
+    </td>
+    <td>
+        <div class='text-right'>
+            <input wicket:id="userId" type="hidden" class="userId"/>
+            <input wicket:id="groupId" type="hidden" class="groupId"/>
+            <input wicket:id="username" type="hidden" class="username"/>
+            <a class='btn btn-inverse btn-xs' href='#' onclick="makeAdminPopup(this);" id="priviledgeLevelButton">
+            <i class='icon-thumbs-up-alt'></i>
+            </a>
+            <a class='btn btn-danger btn-xs' href='#' onclick="deleteUserPopup(this);" id="deleteMemberButton">
+            <i class='icon-remove'></i>
+            </a>
+        </div>
+    </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div tabindex="-1" id="deletionModal" class="modal fade" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form wicket:id="deleteForm" accept-charset="UTF-8" action="#" method="post" style="margin-bottom: 0;" class="form">
+                <div class="modal-header">
+                    <button type="button" data-dismiss="modal" class="close" aria-hidden="true">×</button>
+                    <h4 id="myModalLabel" class="modal-title">Confirm</h4>
+                </div>
+                <div class="modal-body">
+                    <span id="message"></span>
+                    <input wicket:id="userId" id="userId" type="hidden" class="form-control">
+                    <input wicket:id="groupId" id="groupId" type="hidden" class="form-control">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-success">Cancel</button>
+                    <button class="btn btn-danger" type="submit">Delete Member</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div tabindex="-1" id="makeAdminModal" class="modal fade" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form wicket:id="privilegeLevelForm" accept-charset="UTF-8" action="#" method="post" style="margin-bottom: 0;" class="form">
+                <div class="modal-header">
+                    <button type="button" data-dismiss="modal" class="close" aria-hidden="true">×</button>
+                    <h4 id="adminLabel" class="modal-title">Change User privileges?</h4>
+                </div>
+                <div class="modal-body">
+                    <span id="pmessage"></span>     <br/>
+                    <input wicket:id="userId" id="pUserId" type="hidden" class="form-control">
+                    <input wicket:id="groupId" id="pGroupId" type="hidden" class="form-control">
+                    <select wicket:id="privilegeLevel" id="privilegeLevel" type="hidden" class="form-control"/>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" data-dismiss="modal" class="btn btn-success">Cancel</button>
+                    <button class="btn btn-danger" type="submit">Change</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    function deleteUserPopup(element){
+        var userId = $(element).parent().find('.userId').attr('value');
+        var groupId = $(element).parent().find('.groupId').attr('value');
+        var username = $(element).parent().find('.username').attr('value');
+        $("#userId").val(userId);
+        $("#groupId").val(groupId);
+        $("#message").text('Are you sure your want to remove ' + username + ' from this group?');
+        $("#deletionModal").modal();
+    }
+    function makeAdminPopup(element){
+        var userId = $(element).parent().find('.userId').attr('value');
+        var groupId = $(element).parent().find('.groupId').attr('value');
+        var username = $(element).parent().find('.username').attr('value');
+        $("#pUserId").val(userId);
+        $("#pGroupId").val(groupId);
+        $("#pmessage").text('Are you sure your want to privilege level of ' + username + ' from this group?');
+        $("#makeAdminModal").modal();
+    }
+</script>
+</wicket:extend>
+</body>
+</html>
